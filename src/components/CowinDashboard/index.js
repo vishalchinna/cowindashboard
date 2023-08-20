@@ -55,6 +55,7 @@ class CowinDashboard extends Component {
 
   renderFailureView = () => (
     <div className="">
+      <h1 className="head-table">Something went wrong</h1>
       <img
         src="https://assets.ccbp.in/frontend/react-js/api-failure-view.png"
         alt="failure view"
@@ -71,6 +72,7 @@ class CowinDashboard extends Component {
 
   renderResultView = () => {
     const {loading} = this.state
+    console.log(loading)
     switch (loading) {
       case apiStatus.initial:
         return this.renderLoading()
